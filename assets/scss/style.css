@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e5e5df;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+article {
+  width: 50%;
+  height: 750px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+}
+article h2, article h3, article h4, article p {
+  padding-left: 5px;
+}
+article #fond {
+  width: 110%;
+  height: auto;
+}
+article #date {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 1px solid #46C3C6;
+  background-color: #46C3C6;
+  font-weight: bold;
+  z-index: 2;
+}
+article #fondBlanc {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.547);
+  z-index: 1;
+  position: absolute;
+  display: none;
+}
+
+#containerBot {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  position: relative;
+  background-color: #fff;
+  z-index: 2;
+}
+#containerBot div {
+  margin-top: 5%;
+  font-size: 20px;
+}
+#containerBot div h2 {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid #46C3C6;
+  padding: 5px;
+  margin-left: 5px;
+  background-color: #46C3C6;
+  position: absolute;
+  top: -10%;
+  border-radius: 5px;
+}
+#containerBot div h3 {
+  font-size: 30px;
+  margin-left: 2%;
+}
+#containerBot div h4 {
+  color: #46C3C6;
+}
+#containerBot #textToDisplay {
+  opacity: 0;
+  font-size: 20px;
+  width: 75%;
+  margin: auto;
+  margin-top: 25px;
+}
+
+#icone {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
+#icone p {
+  padding: 10px;
+}
+#icone p img {
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+}
+#icone #icone {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+article:hover {
+  box-shadow: 2px 2px 5px 1px #333333;
+}
+article:hover #fondBlanc {
+  display: block;
+}
+article:hover #fond {
+  animation: 2s ease forwards zoom;
+}
+article:hover #containerBot {
+  animation: 2s ease both hover;
+}
+article:hover #containerBot #textToDisplay {
+  animation: texte 2s ease forwards;
+}
+@keyframes texte {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes hover {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-20%);
+  }
+}
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(2);
+  }
+}/*# sourceMappingURL=style.css.map */
