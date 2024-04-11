@@ -24,6 +24,16 @@ article {
   overflow: hidden;
   background-color: #fff;
 }
+@media screen and (max-width: 426px) {
+  article {
+    height: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  article {
+    height: 75%;
+  }
+}
 article h2, article h3, article h4, article p {
   padding-left: 5px;
 }
@@ -32,6 +42,11 @@ article #fond {
   height: auto;
   transition: transform 2s;
   transform: scale(1);
+}
+@media screen and (max-width: 426px) {
+  article #fond {
+    transform: scale(2);
+  }
 }
 article #date {
   display: flex;
@@ -83,12 +98,29 @@ article #fondBlanc {
   top: -10%;
   border-radius: 5px;
 }
+@media screen and (max-width: 426px) {
+  #containerBot div h2 {
+    top: -5%;
+    font-size: 14px;
+    padding: 2px;
+  }
+}
 #containerBot div h3 {
   font-size: 30px;
   margin-left: 2%;
 }
+@media screen and (max-width: 426px) {
+  #containerBot div h3 {
+    font-size: 14px;
+  }
+}
 #containerBot div h4 {
   color: #46C3C6;
+}
+@media screen and (max-width: 426px) {
+  #containerBot div h4 {
+    font-size: 14px;
+  }
 }
 #containerBot #textToDisplay {
   opacity: 0;
@@ -98,6 +130,16 @@ article #fondBlanc {
   margin-top: 25px;
   transition: opacity 2s;
 }
+@media screen and (max-width: 426px) {
+  #containerBot #textToDisplay {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #containerBot #textToDisplay {
+    font-size: 15px;
+  }
+}
 
 #icone {
   display: flex;
@@ -106,6 +148,12 @@ article #fondBlanc {
 }
 #icone p {
   padding: 10px;
+  cursor: pointer;
+}
+@media screen and (max-width: 426px) {
+  #icone p {
+    font-size: 8px;
+  }
 }
 #icone p img {
   width: 20px;
