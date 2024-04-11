@@ -34,11 +34,6 @@ $laptop : 1024px;
     }
 }
 
-@mixin laptop {
-    @media screen and (min-width: $tablet+1px) {
-        @content
-    }
-}
 
 
 article{
