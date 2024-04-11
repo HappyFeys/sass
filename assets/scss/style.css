@@ -30,6 +30,8 @@ article h2, article h3, article h4, article p {
 article #fond {
   width: 110%;
   height: auto;
+  transition: transform 2s;
+  transform: scale(1);
 }
 article #date {
   display: flex;
@@ -63,6 +65,8 @@ article #fondBlanc {
   position: relative;
   background-color: #fff;
   z-index: 2;
+  transition: transform 2s;
+  transform: translateY(0);
 }
 #containerBot div {
   margin-top: 5%;
@@ -92,6 +96,7 @@ article #fondBlanc {
   width: 75%;
   margin: auto;
   margin-top: 25px;
+  transition: opacity 2s;
 }
 
 #icone {
@@ -119,35 +124,11 @@ article:hover #fondBlanc {
   display: block;
 }
 article:hover #fond {
-  animation: 2s ease forwards zoom;
+  transform: scale(2);
 }
 article:hover #containerBot {
-  animation: 2s ease both hover;
+  transform: translateY(-20%);
 }
 article:hover #containerBot #textToDisplay {
-  animation: texte 2s ease forwards;
-}
-@keyframes texte {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes hover {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-20%);
-  }
-}
-@keyframes zoom {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(2);
-  }
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

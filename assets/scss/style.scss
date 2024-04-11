@@ -39,6 +39,8 @@ article{
     #fond{
         width: 110%;
         height: auto;
+        transition: transform 2s;
+        transform: scale(1);
     }
 
     #date{
@@ -75,6 +77,8 @@ article{
     position: relative;
     background-color: #fff;
     z-index: 2;
+    transition: transform 2s;
+    transform: translateY(0);
     div{
         margin-top: 5%;
         font-size: 20px;
@@ -99,13 +103,13 @@ article{
         }
     }
 
-
     #textToDisplay{
         opacity: 0;
         font-size: 20px;
         width: 75%;
         margin: auto;
         margin-top: 25px;
+        transition: opacity 2s;
     }
 
 }
@@ -138,31 +142,14 @@ article:hover{
     }
 
     #fond{
-        animation: 2s ease forwards zoom;
+        transform: scale(2);
     }
-
 
     #containerBot{
-        animation: 2s ease both hover;
+        transform: translateY(-20%);
 
         #textToDisplay{
-            animation: texte 2s ease forwards;
+            opacity: 1;
         }
-        
-    }
-
-    @keyframes texte {
-        from{opacity: 0;}
-        to{opacity: 1;}
-    }
-
-    @keyframes hover {
-        from {transform: translateY(0);}
-        to {transform: translateY(-20%);}
-    }
-    
-    @keyframes zoom {
-        from{transform: scale(1);}
-        to{transform: scale(2);}
     }
 }
